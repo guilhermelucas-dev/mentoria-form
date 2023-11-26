@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Mentoria</title>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Mentoria</h1>
+      <p>Preencha o formulário abaixo para agendar a sua mentoria</p>
+    </header>
+    
+    <form id="my-form" action="" method="post">
+      <fieldset>
+        <legend>Informações Pessoais</legend>
+        <div class="wrapper-name">
+          <div class="wrapper-input">
+            <label for="name">Nome</label> 
+            <input type="text" id="name" name="name">
+          </div>
+          <div class="wrapper-input">
+            <label for="last-name">Sobrenome</label>
+            <input type="text" id="last-name" name="last-name">
+          </div>
+        </div>
+        <div class="wrapper-input">
+          <label for="email">Email<span>(digite um email válido)</span></label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div class="wrapper-input">
+          <label for="password">Senha<span>(mínimo de 6 caracteres)</span></label>
+          <input type="password" id="passowrd" name="passowrd">
+        </div>
+      </fieldset>
+
+      <fieldset>
+          <legend>Informações do mentor</legend>
+        <div class="wrapper-input">
+          <label for="mentor">Nome do seu mentor<span>(só o primeiro nome)</span></label>
+          <input type="text" id="mentor" name="mentor">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Seus horários disponíveis</legend>
+        <fieldset class="first-date">
+          <legend class="legend-date">Primeira mentoria</legend>
+          <div class="wrapper-date">
+            <div class="wrapper-input">
+              <label for="first-date">Data<span>(DD/MM/AAAA)</span></label>
+              <input type="text" id="first-date" name="first-date" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
+            </div>
+            <div class="wrapper-input">
+              <label for="first-houer">Das</label>
+              <input type="text" id="first-start" name="first-start" onfocus="(this.type='time')" onblur="if(!this.value) this.type='text'">
+            </div>
+            <div class="wrapper-input">
+              <label for="first-end">Até</label>
+              <input type="text" id="first-end" name="first-end" onfocus="(this.type='time')" onblur="if(!this.value) this.type='text'">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="second-date">
+          <legend class="legend-date">Segunda mentoria</legend>
+          <div class="wrapper-date">
+          <div class="wrapper-input">
+            <label for="second-date">Data<span>(DD/MM/AAAA)</span></label>
+            <input type="text" id="second-date" name="second-date" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
+          </div>
+          <div class="wrapper-input">
+            <label for="second-houer">Das</label>
+            <input type="text" id="second-start" name="second-start" onfocus="(this.type='time')" onblur="if(!this.value) this.type='text'">
+          </div>
+          <div class="wrapper-input">
+            <label for="second-end">Até</label>
+            <input type="text" id="second-end" name="second-end" onfocus="(this.type='time')" onblur="if(!this.value) this.type='text'">
+          </div>
+          </div>
+        </fieldset>
+      </fieldset>
+       
+    </form>
+    <footer>
+      <input class="button" form="my-form" type="submit" value="Salvar">
+    </footer>
+  </div>
+
+</body>
+</html>
